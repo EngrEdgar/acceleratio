@@ -10,8 +10,6 @@ class Header extends Component {
         this.state = {
           isNavOpen: false,
         };
-
-        this.toggleNav = this.toggleNav.bind(this);
     }
 
     toggleNav() {
@@ -42,6 +40,11 @@ class Header extends Component {
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">
                                         <i className="fa fa-home fa-lg" /> Home
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/guide">
+                                        <i className="fa fa-arrow-right fa-lg" /> Guide
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>

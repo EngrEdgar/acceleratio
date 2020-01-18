@@ -41,10 +41,10 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        Analysis shows both the analysis color and its complement at any given time. The “Show Spectrum” button displays continuously changing colors as values are traced along the edge of the RGB cube. The two output data fields to the right show the hexadecimal values of the analysis and complement colors; background colors reflect the actual colors on display at any given time. Three input fields allow the user to enter any color value described using the RGBA notation. The user may enter any one color from 16,777,216 possibilities; user may also specify the opacity. The “Analyze” button to the right will display the analysis color, the complement color, and their hexadecimal values.
+                        Audible sound is a succession of individual or combined pitches (i.e., notes at specified registers) of the same or different intensities.
                     </p>
                     <p>
-                        The “Transform” button shows the acoustic properties of oscillation frequency and acoustic color corresponding to user-entered acoustic designation. This transformation is the inverse process of determining the acoustic designation from calculated oscillation frequencies in the spring-mass system.
+                        Experiential data has been collected on the relationship between sound pitch class and color. This correlation – more than merely coincidental – uses data from human experience. This set of data allows the experience and conceptualization of a sound pitch in terms of its associated color.
                     </p>
                 </div>
             </div>
@@ -71,13 +71,64 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        The oscillator model utilizes the equivalent mass, damping coefficient, and spring constant to represent the actual behavior of physical systems which can be described, at a certain level, by these elements. This representation applies more accurately to analog systems. In the case of electronic systems, the equivalent parameter values can be derived.
+                        The oscillator model utilizes the equivalent mass, damping coefficient, and spring constant to represent the actual behavior of physical systems which can be described, at a certain level, by these elements. This representation applies more accurately to analog systems. In the case of electronic or other mechanical or structural systems, the equivalent parameter values can be derived.
                     </p>
                     <p>
-                        The user enters values for the mass, damping coefficient, spring constant, and time span before the start of simulation.  The “Move Up” and “Move Down” buttons allow the user to specify the starting displacement of the mass from its equilibrium position – which already takes into account its weight. The other two simulation buttons (i.e., "Start" and "Stop") allow the user to either start or reset the simulation. The gray area shows the movement of the simulated mass. A time plot of the vertical displacement is generated. The total time elapsed – from the “release” of the mass from its displaced position – is also shown. From the user’s perspective, differential equations are solved in real-time. Pre-simulation changes in input data – as entered by the user – are fully reflected in the shape of the time plot.
+                        The oscillator model solves a second order linear differential equation to calculate the resultant frequency of oscillation. Damping causes an exponential decay. The resultant time displacement is directly proportional to the initial displacement imparted to the variable of interest. In a practical system where an undamped time displacement may not be perfectly sinusoidal, the calculated oscillation frequency corresponds to the fundamental frequency in a Fourier Series expansion.
                     </p>
+                </div>
+            </div>
+            <div className="row row-content">     
+                <div className="col-sm-12">
+                    <h4 align="center">
+                        <strong>
+                            Areas of Application
+                        </strong>
+                    </h4>
+                    <Card className="bg-light mt-4">
+                        <CardBody>
+                            <blockquote className="blockquote">
+                                <p className="mb-0">
+                                    <em>
+                                        "The relative attractiveness of options varies when the same problem is framed in different ways."
+                                    </em>
+                                    <span> - Kahneman and Tversky</span>
+                                </p>
+                            </blockquote>
+                        </CardBody>
+                    </Card>
+                </div>                
+                <div className="col-sm-12">
+                    <p></p>
                     <p>
-                        The display fields (i.e., "Hertz", "Note" and "Octave") indicate acoustic properties and designation corresponding to the user-entered input values for the mass, damping, and spring constant. For any given set of input values, the colors for the background of the display fields and for the mass and spring correspond to the acoustic color of the oscillation frequency.
+                        The set of analyses presented here correspond to basic steps in several areas of application including acoustics, design of musical instruments, analysis of mechanical and structural systems, and modulation of very high frequency signals using sound. In any area of application, as mentioned above, the analogous or equivalent parameters can be derived. The basic application can then be extended for more in-depth analysis or design.
+                    </p>
+                </div>
+            </div>
+            <div className="row row-content">     
+                <div className="col-sm-12">
+                    <h4 align="center">
+                        <strong>
+                            User's Guide
+                        </strong>
+                    </h4>
+                    <Card className="bg-light mt-4">
+                        <CardBody>
+                            <blockquote className="blockquote">
+                                <p className="mb-0">
+                                    <em>
+                                        "The customer has always driven the business model."
+                                    </em>
+                                    <span> - Amancio Ortega</span>
+                                </p>
+                            </blockquote>
+                        </CardBody>
+                    </Card>
+                </div>                
+                <div className="col-sm-12">
+                    <p></p>
+                    <p>
+                        Click on the Guide tab to get to the User’s Guide.
                     </p>
                 </div>
             </div>

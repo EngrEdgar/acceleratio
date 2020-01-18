@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import Home from './HomeComponent';
+import Guide from './GuideComponent';
 import Colors from './ColorsComponent';
 import SpringMass from './SpringMassComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -20,6 +21,7 @@ class Main extends Component {
             <Header />
             <Switch>
                 <Route path='/home' component={HomePage} />
+                <Route exact path='/guide' component={Guide} />
                 <Route exact path='/colors' component={Colors} />
                 <Route exact path='/springmass' component={SpringMass} />
                 <Redirect to='/home' />
