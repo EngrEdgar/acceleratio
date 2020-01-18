@@ -14,7 +14,7 @@ function Home(props) {
                     </h3>
                     <p></p>
                     <p>
-                        These applications serve as toolkits for users involved in the manufacture of products requiring serious consideration of visual and audio elements.
+                        These basic applications serve as aids for users involved in the analysis or design of products requiring consideration of visual and audio elements.
                     </p>
                 </div>
             </div>
@@ -42,10 +42,10 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        Audible sound is a succession of individual or combined <a href="http://openmusictheory.com/pitches.html" target="_blank">pitches</a> (i.e., notes at specified registers) of the same or different intensities.
+                        Audible <a href="https://www.fceia.unr.edu.ar/acustica/comite/soundbas.htm" target="_blank">sound</a> is a succession of individual or combined <a href="http://openmusictheory.com/pitches.html" target="_blank">pitches</a> (i.e., notes at specified registers) of the same or different intensities.
                     </p>
                     <p>
-                        Experiential data has been collected on the relationship between sound pitch class and color. This correlation – more than merely coincidental – uses data from human experience. This set of data allows the experience and conceptualization of a sound pitch in terms of its <a href="https://www.flutopedia.com/sound_color.htm" target="_blank">associated color</a>.
+                        Experiential data<sup>1</sup> has been collected on the relationship between sound pitch class and color. This correlation – more than merely coincidental – uses data from human experience. This set of data allows the experience and conceptualization of a sound pitch in terms of its <a href="https://www.flutopedia.com/sound_color.htm" target="_blank">associated color</a>.
                     </p>
                 </div>
             </div>
@@ -72,7 +72,7 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        The oscillator model utilizes the equivalent mass, damping coefficient, and spring constant to represent the actual behavior of physical systems which can be described, at a certain level, by these elements. This representation applies more accurately to analog systems. In the case of electronic or other mechanical or structural systems, the equivalent parameter values can be derived.
+                        The oscillator model<sup>2</sup> utilizes the equivalent mass, damping coefficient, and spring constant to represent the actual behavior of physical systems which can be described, at a certain level, by these elements. This representation applies more accurately to analog systems. With respect to other fields of application and in the case of electronic or other mechanical or structural systems, the equivalent parameter values can be derived.
                     </p>
                     <p>
                         The oscillator model solves a second order linear differential equation to calculate the resultant frequency of oscillation. Damping causes an exponential decay. The resultant time displacement is directly proportional to the initial displacement imparted to the variable of interest. In a practical system where an undamped time displacement may not be perfectly sinusoidal, the calculated oscillation frequency corresponds to the fundamental frequency in a Fourier Series expansion.
@@ -131,6 +131,38 @@ function Home(props) {
                     <p>
                         Click on the <Link to={`/guide`}>Guide</Link> tab to get to the User’s Guide.
                     </p>
+                </div>
+            </div>
+            <div className="row row-content">     
+                <div className="col-sm-12">
+                    <h4 align="center">
+                        <strong>
+                            Bibliography
+                        </strong>
+                    </h4>
+                    <Card className="bg-light mt-4">
+                        <CardBody>
+                            <blockquote className="blockquote">
+                                <p className="mb-0">
+                                    <em>
+                                        "In addition to the hyperlinked sources, the following reference materials were also sourced for this website."
+                                    </em>
+                                    <span> - Acceleratio</span>
+                                </p>
+                            </blockquote>
+                        </CardBody>
+                    </Card>
+                </div>                
+                <div className="col-sm-12">
+                    <p></p>
+                    <ol>
+                        <li>
+                            Flynn, E.N. (2014). <i>Liberation of the Senses: An Exploration of Sound-Color Synesthesia in the Music of Alexander Scriabin and Olivier Messiaen</i> (Masteral Thesis). Retrieved from https://kuscholarworks.ku.edu/handle/1808/18408.
+                        </li>
+                        <li>
+                            Rossing, T.D., editor. <i>The Science of String Instruments.</i> Stanford University, 2010. Retrieved from https://logosfoundation.org/kursus/The%20Science%20of%20String%20Instruments.pdf.
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>

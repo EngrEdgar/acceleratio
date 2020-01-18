@@ -49,7 +49,7 @@ function Guide(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        The "Acoustics" section is a related but distinct application from the "Color Spectrum" applicaiton. Using the respective selection menus, enter the "Note" and "Octave" input data. Then, click on the “Transform” button to show the acoustic properties of oscillation frequency and acoustic color corresponding to user-entered acoustic designation.
+                        The "Acoustics" section is a related but distinct application from the "Color Spectrum" applicaiton. Using the respective selection menus, enter the "Note" and "Octave" input data. Then, click on the “Transform” button to show the <a href="https://www.flutopedia.com/sound_color.htm" target="_blank">acoustic properties</a> (i.e., oscillation frequency and acoustic color) corresponding to user-entered acoustic designation.
                     </p>
                     <img src="/assets/images/AcousticInput.png" height="35%" alt="AcousticInput" />
                     <br></br><br></br>
@@ -69,7 +69,7 @@ function Guide(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        The simulate the behavior of the equivalent spring-mass system, enter values for the mass, damping coefficient, spring constant, and time span before the start of simulation. Click on the “Up” (or "Down") button to specify a starting displacement above (or below) the equilibrium position. Here, the equilibrium position takes into account the weight of the mass. The "Start" button starts the simulation; the "Stop" button resets it.
+                        To simulate the behavior of the equivalent spring-mass system, enter values for the mass, damping coefficient, spring constant, and time span before the start of simulation. Click on the “Up” (or "Down") button to specify a starting displacement above (or below) the equilibrium position. Here, the equilibrium position takes into account the weight of the mass. The "Start" button starts the simulation; the "Stop" button resets it.
                     </p>    
                     <img src="/assets/images/OscillatorModel.png" height="23%" alt="Oscillator Model Input" />
                     <br></br><br></br>
@@ -77,7 +77,7 @@ function Guide(props) {
                         The simulated mass moves inside the gray area. The application (a) generates a time plot of the vertical displacement as the mass moves, (b) shows the total time elapsed – from the “release” of the mass from its displaced position, (c) solves the differential equations in real-time, and (d) fully reflects pre-simulation changes in input data – as entered by the user.
                     </p>
                     <p>
-                        The display fields (i.e., "Hertz", "Note" and "Octave") indicate acoustic properties and designation corresponding to the user-entered input values for the mass, damping, and spring constant. For any given set of input values, the colors for the background of the display fields and for the mass and spring correspond to the acoustic color of the oscillation frequency.
+                        The display fields (i.e., "Hertz", "Note" and "Octave") indicate acoustic properties and designation corresponding to the user-entered input values for the mass, damping, and spring constant. For any given set of input values, the background color for the display fields (and for the spring and mass graphical representations) adjusts to correspond to the <a href="https://www.flutopedia.com/sound_color.htm" target="_blank">acoustic color of the oscillation frequency</a>.
                     </p>
                 </div>
             </div>
