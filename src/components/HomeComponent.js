@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardBody } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function Home(props) {
     return (
@@ -13,7 +14,7 @@ function Home(props) {
                     </h3>
                     <p></p>
                     <p>
-                        These applications serve as toolkits for professionals involved in the manufacture of products requiring serious consideration of visual and audio elements.
+                        These applications serve as toolkits for users involved in the manufacture of products requiring serious consideration of visual and audio elements.
                     </p>
                 </div>
             </div>
@@ -41,10 +42,10 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        Audible sound is a succession of individual or combined pitches (i.e., notes at specified registers) of the same or different intensities.
+                        Audible sound is a succession of individual or combined <a href="http://openmusictheory.com/pitches.html" target="_blank">pitches</a> (i.e., notes at specified registers) of the same or different intensities.
                     </p>
                     <p>
-                        Experiential data has been collected on the relationship between sound pitch class and color. This correlation – more than merely coincidental – uses data from human experience. This set of data allows the experience and conceptualization of a sound pitch in terms of its associated color.
+                        Experiential data has been collected on the relationship between sound pitch class and color. This correlation – more than merely coincidental – uses data from human experience. This set of data allows the experience and conceptualization of a sound pitch in terms of its <a href="https://www.flutopedia.com/sound_color.htm" target="_blank">associated color</a>.
                     </p>
                 </div>
             </div>
@@ -101,7 +102,7 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        The set of analyses presented here correspond to basic steps in several areas of application including acoustics, design of musical instruments, analysis of mechanical and structural systems, and modulation of very high frequency signals using sound. In any area of application, as mentioned above, the analogous or equivalent parameters can be derived. The basic application can then be extended for more in-depth analysis or design.
+                        The set of analyses presented here correspond to basic steps in several areas of application including <a href="https://acousticalsociety.org/" target="_blank">acoustics</a>, design of <a href="https://exploresound.org/2017/02/physics-stringed-instruments/" target="_blank">musical instruments</a>, analysis of mechanical and <a href="http://www.civil.uwaterloo.ca/Xie/Graphics/XIE_Differential%20Equations%20for%20Engineers_Excerpt.pdf" target="_blank">structural systems</a>, and <a href="https://www.sciencedaily.com/releases/2019/09/190916081442.htm" target="_blank">selective processing</a> in silicon chips using sound waves. In any area of application, as mentioned above, the analogous or equivalent parameters can be derived. The basic application can then be extended for more in-depth analysis or design.
                     </p>
                 </div>
             </div>
@@ -128,7 +129,7 @@ function Home(props) {
                 <div className="col-sm-12">
                     <p></p>
                     <p>
-                        Click on the Guide tab to get to the User’s Guide.
+                        Click on the <Link to={`/guide`}>Guide</Link> tab to get to the User’s Guide.
                     </p>
                 </div>
             </div>

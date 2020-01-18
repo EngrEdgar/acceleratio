@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function Guide(props) {
     return (
@@ -13,7 +13,7 @@ function Guide(props) {
                     </h3>
                     <p></p>
                     <p>
-                        This page provides guidance on available functionalities in the Spectrum and in the Oscillator tabs.
+                        This page provides guidance on available functionalities in the <Link to={`/spectrum`}>Spectrum</Link> and <Link to={`/oscillator`}>Oscillator</Link> tabs.
                     </p>
                 </div>
             </div>

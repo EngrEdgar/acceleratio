@@ -22,8 +22,8 @@ class Main extends Component {
             <Switch>
                 <Route path='/home' component={HomePage} />
                 <Route exact path='/guide' component={Guide} />
-                <Route exact path='/colors' component={Colors} />
-                <Route exact path='/springmass' component={SpringMass} />
+                <Route exact path='/spectrum' component={Colors} />
+                <Route exact path='/oscillator' component={SpringMass} />
                 <Redirect to='/home' />
             </Switch>
         </div>

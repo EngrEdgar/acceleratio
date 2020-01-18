@@ -48,12 +48,12 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/colors">
+                                    <NavLink className="nav-link" to="/spectrum">
                                         <i className="fa fa-lightbulb-o fa-lg" /> Spectrum
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/springmass">
+                                    <NavLink className="nav-link" to="/oscillator">
                                         <i className="fa fa-clock-o fa-lg" /> Oscillator
                                     </NavLink>
                                 </NavItem>
