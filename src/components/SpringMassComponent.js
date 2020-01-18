@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Label, Col, Row } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
-import ReactDOM from 'react-dom';
+import TheaterPlotTimer from './TheaterPlotTimerComponent';
 
 const required = val => val && val.length;
 const isPositiveNumber = val => (!isNaN(+val) && (val > 0));
@@ -15,7 +14,7 @@ const temporalScaleFactor = 1.0;
 const spatialScaleFactor = 1.0;
 /* Start: Time Interval Between Succesive Iterations */
 const deltaTimeJS = 0.5; //in ms.
-/* End: Time Interval Between Succesive Iterations */
+/* End: Time Interval Between Successive Iterations */
 const xVarStopLimit = 0.000000000000000001;
 
 /* Global Variable Declaration of setInterval Id */
@@ -170,6 +169,13 @@ class SpringMass extends Component {
 
     render() {
 
+        if (this.state.axesNeeded) {
+            xpOld = xpNew;
+            ypOld = ypNew;
+            xpNew = xPos - 100;
+            ypNew = Math.round(300 * (physicalTime / physicalTimeMax));
+        }
+
         return (
             <React.Fragment>
                 <div className="container">
@@ -301,160 +307,20 @@ class SpringMass extends Component {
                 <TheaterPlotTimer 
                     numSpringHeight={this.state.numSpringHeight} 
                     numWeightTop = {this.state.numWeightTop}
-                    physicalTime = {physicalTime}
                     axesNeeded = {this.state.axesNeeded}
+                    xpOld = {xpOld}
+                    xpNew = {xpNew}
+                    ypOld = {ypOld}
+                    ypNew = {ypNew}
+                    xPos = {xPos}
+                    physicalTime = {physicalTime}
+                    physicalTimeMax = {physicalTimeMax}
+                    smRgbaColor = {smRgbaColor}
+                    freqHertz = {freqHertz}
+                    smAcNote = {smAcNote}
+                    smAcOctave = {smAcOctave}
                 />
             </React.Fragment>
-        );
-    }
-}
-
-class TheaterPlotTimer extends Component {
-
-    constructor(props) {
-        super(props);
-        this.canvasRef = React.createRef();
-        this.drawSegment = this.drawSegment.bind(this);
-        this.drawAxes = this.drawAxes.bind(this);
-    }
-
-    componentDidMount() {
-        const theCanvas = this.canvasRef.current;
-        const theCTX = theCanvas.getContext("2d");
-
-        console.log(`In TheaterPlotTimer componentDidMount()...`);
-        console.log(`theCanvas is ${theCanvas}`);
-        console.log(`theCTX is ${theCTX}`);
-        console.log(`axesNeeded is ${this.props.axesNeeded}`);
-
-        this.drawAxes(theCTX);
-    }
-
-    drawAxes(theCTX) {
-
-        console.log(`In TheaterPlotTimer drawAxes()`);
-
-        theCTX.strokeStyle = "rgba(0, 150, 150, 1.0)";
-        theCTX.beginPath();
-        theCTX.moveTo(0, 100);
-        theCTX.lineTo(300, 100);
-        theCTX.stroke();
-    }
-
-    drawSegment() {
-        /* console.log(`at TheaterPlotTimer drawSegment()`); */
-        const theCanvas = this.canvasRef.current;
-        if (theCanvas) {
-            const theCTX = theCanvas.getContext("2d");
-            if (this.props.axesNeeded) {
-                xpOld = xpNew;
-                ypOld = ypNew;
-                xpNew = xPos - 100;
-                ypNew = Math.round(300 * (physicalTime / physicalTimeMax));
-
-                if (!(physicalTime === 0)) {
-                    const xpOldScaled = 50 + Math.round(xpOld / 2);
-                    const xpNewScaled = 50 + Math.round(xpNew / 2);
-
-                    if (smRgbaColor) {
-                        theCTX.strokeStyle = smRgbaColor;
-                    }
-                    else {
-                        theCTX.strokeStyle = "rgba(255, 255, 255, 1.0)";    
-                    }
-                    
-                    //theCTX.strokeStyle = "rgba(150, 0, 0, 0.70)";
-                    
-                    theCTX.beginPath();
-                    theCTX.moveTo(ypOld, xpOldScaled);
-                    theCTX.lineTo(ypNew, xpNewScaled);
-                    theCTX.stroke();      
-                }               
-            }
-            else {
-                theCTX.clearRect(0, 0, 300, 200 )
-                this.drawAxes(theCTX);
-            }
-        }
-    }
-
-    render() {
-
-        const styleAcousticsFld = {
-            "background-color" : smRgbaColor
-        };
-
-        const pxSpringHeight = this.props.numSpringHeight + "px";
-        const pxWeightTop = this.props.numWeightTop + "px";
-
-        let strPhysicalTime = "";
-        if (this.props.axesNeeded) {
-            strPhysicalTime = this.props.physicalTime + "";
-        }
-
-        const styleSpring = {
-            "height" : pxSpringHeight,
-            "background-color": smRgbaColor
-        }
-
-        const styleWeight = {
-            "top" : pxWeightTop,
-            "background-color": smRgbaColor
-        }
-
-        this.drawSegment();
-
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <div id="theThtr">
-                            <div id="theSprng" style={styleSpring}></div>
-                            <div id="theWght" style={styleWeight}></div>
-                        </div>
-                        <div className="canvas-container" id="pltDiv">
-                            <canvas ref={this.canvasRef} id="pltCanvas"></canvas>
-                        </div>
-                        <div id="clckDiv">
-                            <label htmlFor="liveTimerFld" id="timerLbl">
-                                Seconds
-                            </label>
-                            <input type="text" name="liveTimer" id="liveTimerFld" value={strPhysicalTime} size="4">
-                            </input>
-                        </div>
-                        <div id="acDesignationDiv">
-                            <Row className="form-group">
-                                <Col className="ml-0" xs={{size: 6, offset: 0}}>
-                                    <label htmlFor="acHertz" id="acHertzLbl">
-                                        Hertz
-                                    </label>
-                                    <input type="text" name="acHertz" id="acHertz" value={freqHertz} style={styleAcousticsFld} size="4">
-                                    </input>
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Col className="ml-0" xs={{size: 2, offset: 0}}>
-                                    <label htmlFor="acNote" id="acNoteLbl">
-                                        Note
-                                    </label>
-                                    <input type="text" name="acNote" id="acNote" value={smAcNote} style={styleAcousticsFld} size="6">
-                                    </input>
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Col className="ml-0" xs={{size: 2, offset: 0}}>
-                                    <label htmlFor="acOctave" id="acOctaveLbl">
-                                        Octave
-                                    </label>
-                                    <input type="text" name="acOctave" id="acOctave" value={smAcOctave} style={styleAcousticsFld} size="6">
-                                    </input>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div id="spacerDiv"></div>
-                    </div>
-                </div>
-            </div>
         );
     }
 }
