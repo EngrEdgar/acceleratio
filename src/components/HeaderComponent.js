@@ -46,21 +46,14 @@ class Header extends Component {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/colors">
-                                        <i className="fa fa-lightbulb-o fa-lg" /> Colors
+                                        <i className="fa fa-lightbulb-o fa-lg" /> Spectrum
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/springmass">
-                                        <i className="fa fa-clock-o fa-lg" /> Spring-Mass
+                                        <i className="fa fa-clock-o fa-lg" /> Oscillator
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <a id="colorsHTML" href="http://localhost:3001/apps/Colors.html" target="_blank"><i className="fa fa-lightbulb-o fa-lg" /> Colors</a>
-                                </NavItem>
-                                <NavItem>
-                                    <a  id="springMassHTML" href="http://localhost:3001/apps/SpringDampingYTPLot.html" target="_blank"><i className="fa fa-clock-o fa-lg" /> Spring-Mass</a>
-                                </NavItem>
-
                             </Nav>
                         </Collapse>
                     </div>

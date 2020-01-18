@@ -3,13 +3,7 @@ import Header from './HeaderComponent';
 import Home from './HomeComponent';
 import Colors from './ColorsComponent';
 import SpringMass from './SpringMassComponent';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-
-const mapStateToProps = state => {
-    return {
-    };
-};
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 class Main extends Component {
 
@@ -35,5 +29,4 @@ class Main extends Component {
     };
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
-//export default Main;
+export default Main;

@@ -182,7 +182,7 @@ class SpringMass extends Component {
                     <div className="row row-content">
                         <div className="col-12">
                             <h3>
-                                <strong>Spring-Mass System Simulation</strong>
+                                <strong>Oscillator Model</strong>
                             </h3>
                             <p></p>
                         </div>

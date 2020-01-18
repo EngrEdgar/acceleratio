@@ -16,7 +16,16 @@ let bnuma = 0;
 let stage = 1;
 let colorsSetIntervalId = 0;
 
-class Colors extends Component {
+function Colors(props) {
+    return (
+        <React.Fragment>
+            <ColorSpectrum />
+            <Acoustics />
+        </React.Fragment>
+    )
+}
+
+class ColorSpectrum extends Component {
 
     constructor(props) {
         super(props);
@@ -347,7 +356,6 @@ class Colors extends Component {
                     blueValue={this.state.blueValue}
                     opacityValue={this.state.opacityValue}
                 />
-                <Acoustics />
             </React.Fragment>
         );
     }
