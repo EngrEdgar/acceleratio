@@ -1,0 +1,58 @@
+
+body {
+  font-family: "Verdana", "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, .card-body>h5 {
+font-family: "Times New Roman", "Lobster", cursive;
+}
+
+h2 {
+  color: #000000;
+}
+
+/*
+.card-img-overlay h5 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+*/
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+/*
+.site-footer {
+  background-image: linear-gradient(#CEC8FF, white);
+  padding: 20px 0;
+}
+*/
+
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  background-image: linear-gradient(to right, #7F7F7F, #7F7F7F, #7F7F7F);
+  color: #FFFFFF;
+}
+
+.jumbotron h2 {
+  color: #FFFFFF;
+}
+
+.navbar-dark {
+  background-color: #005030;
+}
+
+#colorsHTML {
+  margin-top: 50px; 
+  margin-left: 12px;
+  color: #FFAFCF
+}
+
+#springMassHTML {
+  margin-left: 12px;
+  color: #FFAFCF
+}
