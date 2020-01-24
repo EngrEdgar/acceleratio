@@ -93,7 +93,7 @@ function Home(props) {
                                     <em>
                                         "The relative attractiveness of options varies when the same problem is framed in different ways."
                                     </em>
-                                    <span> - Kahneman and Tversky</span>
+                                    <span> - Kahneman and Tversky (The Framing of Decisions and the Psychology of Choice, 1981)</span>
                                 </p>
                             </blockquote>
                         </CardBody>
@@ -120,7 +120,7 @@ function Home(props) {
                                     <em>
                                         "The customer has always driven the business model."
                                     </em>
-                                    <span> - Amancio Ortega</span>
+                                    <span> - Amancio Ortega (Inditex Annual Report, 2009)</span>
                                 </p>
                             </blockquote>
                         </CardBody>

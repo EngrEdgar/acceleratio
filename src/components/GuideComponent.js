@@ -54,7 +54,7 @@ function Guide(props) {
                     <img src="/assets/images/AcousticInput.png" height="35%" alt="AcousticInput" />
                     <br></br><br></br>
                     <p>
-                        This transformation is the inverse process of determining the acoustic designation from calculated oscillation frequencies in the spring-mass system.
+                        This transformation is the inverse process of determining the acoustic designation from calculated oscillation frequencies in the spring-mass system. The transformation uses the <a href="https://ptolemy.berkeley.edu/eecs20/week8/scale.html" target="_blank">A440 standard</a>.
                     </p>
                 </div>
             </div>
