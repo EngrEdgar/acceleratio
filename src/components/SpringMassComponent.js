@@ -13,7 +13,7 @@ const xPosRest = ( ( xPosMin + xPosMax ) / 2 );
 const temporalScaleFactor = 1.0;
 const spatialScaleFactor = 1.0;
 /* Start: Time Interval Between Succesive Iterations */
-const deltaTimeJS = 5.0; //in ms.
+const deltaTimeJS = 2.0; //in ms.
 /* End: Time Interval Between Successive Iterations */
 const xVarStopLimit = 0.000000000000000001;
 

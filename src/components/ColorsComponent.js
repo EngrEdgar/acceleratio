@@ -31,8 +31,6 @@ class ColorSpectrum extends Component {
         super(props);
 
         this.state = {
-            acousticNote: '',
-            acousticOctave: '',
             redValue: 0,
             greenValue: 0,
             blueValue: 0,
